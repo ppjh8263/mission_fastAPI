@@ -31,7 +31,7 @@ def get_result_by_id(result_id: UUID) -> Optional[InferenceResult]:
 
 
 @result_router.post("/", description="Trash Image Classification Inference", tags=['Result'])
-async def make_order(files: List[UploadFile] = File(...)):
+async def make_result(files: List[UploadFile] = File(...)):
     """
     이미지 Inference, 여러 이미지 동시에 가능
     """
